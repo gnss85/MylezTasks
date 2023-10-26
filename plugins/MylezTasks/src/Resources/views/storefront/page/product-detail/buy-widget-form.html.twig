@@ -1,0 +1,12 @@
+{% sw_extends '@Storfront/storefront/page/product-detail/buy-widget-form.html.twig' %}
+
+{% block page_product_detail_buy_button %}
+    <div class="d-grid">
+        <button class="btn btn-primary btn-buy"
+            data-feedbacktext="{{ "detail.addProductFeedback"|trans|sw_sanitize }}"
+            title="{{ "detail.addProduct"|trans|striptags }}"
+            aria-label="{{ "detail.addProduct"|trans|striptags }}">
+            {{ "detail.addProduct"|trans|sw_sanitize }}
+        </button>
+    </div>
+{% endblock %}

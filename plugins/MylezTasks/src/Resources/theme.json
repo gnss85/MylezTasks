@@ -1,0 +1,37 @@
+{
+  "name": "MylezTasks",
+  "author": "Patrick Richter",
+  "views": ["@Storefront", "@Plugins", "@MylezTasks"],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": ["@Storefront", "app/storefront/dist/storefront/js/mylez-tasks.js"],
+  "asset": ["@Storefront", "app/storefront/src/assets"],
+
+  "config": {
+    "blocks": {
+      "customButton": {
+        "label": {
+          "en-GB": "Button Settings",
+          "de-DE": "Button-Einstellungen"
+        }
+      }
+    },
+
+    "fields": {
+      "feedbackcolor": {
+        "label": {
+          "en-GB": "Button Feedback Color",
+          "de-DE": "Button Feedback Farbe"
+        },
+        "type": "color",
+        "editable": true,
+
+        "block": "customButton",
+        "value": "#595959"
+      }
+    }
+  }
+}

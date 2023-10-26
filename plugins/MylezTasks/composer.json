@@ -1,0 +1,18 @@
+{
+  "name": "swag/theme-skeleton",
+  "description": "Theme skeleton plugin",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "MylezTasks\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "MylezTasks\\MylezTasks",
+    "label": {
+      "de-DE": "Theme MylezTasks plugin",
+      "en-GB": "Theme MylezTasks plugin"
+    }
+  }
+}
