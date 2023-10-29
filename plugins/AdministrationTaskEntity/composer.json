@@ -1,0 +1,18 @@
+{
+  "name": "patrick/entity",
+  "description": "Entity Task",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "AdministrationTaskEntity\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "AdministrationTaskEntity\\AdministrationTaskEntity",
+    "label": {
+      "de-DE": "Entity Task",
+      "en-GB": "Entity Task"
+    }
+  }
+}

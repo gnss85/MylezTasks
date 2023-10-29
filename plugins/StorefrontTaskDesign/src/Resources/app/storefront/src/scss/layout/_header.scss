@@ -1,0 +1,87 @@
+.header-main {
+  .row > * {
+    width: unset;
+  }
+
+  .btn {
+    .icon {
+      > svg {
+        top: 0;
+      }
+    }
+  }
+
+  .icon > svg {
+    height: 15px;
+  }
+
+  .icon:not(.icon-custom-icons-stack) > svg path {
+    height: 15px;
+
+    fill: none;
+  }
+
+  @media (min-width: 576px) {
+    .col-lg-auto {
+      flex: 0 0 auto;
+      width: unset;
+    } 
+  } 
+}
+
+.header-row-custom {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1.5rem 0;
+
+  background-color: $white; // This should be sw-background-color in this case but I wanted to have the page background to differ from the header (to simulate the picture which allow you to see the 'edges' of the header)
+}
+
+.header-logo-picture {
+  margin: 0;
+
+  min-width: 128px;
+  max-width: 128px;
+}
+
+.header-logo-col {
+  @media (min-width: 576px) {
+    padding-inline-start: 2rem; // 32px
+    padding-block-start: 0.2rem;
+  }
+}
+
+.header-actions-col {
+    margin-inline-start: 0;
+    padding-inline-end: 2rem; // 32px
+
+    .btn {
+      padding: 0 10px;
+    }
+
+    @media (max-width: 785px) {
+      margin-inline-start: auto;
+    }
+}
+
+@media (min-width: 576px) {
+  .header-cart-badge {
+      display: block;
+  }
+}
+
+.header-cart .badge {
+  display: grid;
+  place-content: center;
+  
+  top:  0;
+  right: 0;
+  
+  padding: 1px;
+  
+  min-width: 13px;
+  height: 13px;
+
+  font-size: 10px;
+}

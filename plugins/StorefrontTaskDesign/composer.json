@@ -1,0 +1,18 @@
+{
+  "name": "patrick/theme-skeleton",
+  "description": "Theme skeleton plugin",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "StorefrontTaskDesign\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "StorefrontTaskDesign\\StorefrontTaskDesign",
+    "label": {
+      "de-DE": "Theme StorefrontTaskDesign plugin",
+      "en-GB": "Theme StorefrontTaskDesign plugin"
+    }
+  }
+}

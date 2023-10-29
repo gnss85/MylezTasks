@@ -1,0 +1,16 @@
+{
+  "name": "StorefrontTaskDesign",
+  "author": "Patrick Richter",
+  "views": ["@Storefront", "@Plugins", "@StorefrontTaskDesign"],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": ["@Storefront", "app/storefront/dist/storefront/js/storefront-task-design.js"],
+  "asset": ["@Storefront", "app/storefront/src/assets"],
+
+  "iconSets": {
+    "custom-icons": "app/storefront/src/assets/icon/custom-icons"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.0",
+  "info": [],
+  "paths": {
+    "/question": {
+      "post": {
+        "tags": [
+          "Question",
+          "Endpoints supporting Criteria "
+        ],
+        "summary": "Question entity endpoint",
+        "description": "Returns a list of question entities.",
+        "operationId": "question",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Criteria"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns a list of question entities.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Question"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKey": []
+          }
+        ]
+      }
+    }
+  }
+}

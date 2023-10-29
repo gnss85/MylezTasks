@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="AdministrationTaskEntity\Core\Content\Question\QuestionDefinition">
+            <tag name="shopware.entity.definition" entity="patrick_question" />
+        </service>
+
+        <service id="AdministrationTaskEntity\Core\Content\Question\QuestionHydrator" public="true">
+            <argument type="service" id="service_container" />
+        </service>
+
+        <service id="AdministrationTaskEntity\Core\Api\QuestionDataController" public="true">
+            <argument id="product.repository" type="service" />
+            <argument id="patrick_question.repository" type="service" />
+
+            <call method="setContainer">
+                <argument type="service" id="patrick_question.repository" />
+            </call>
+        </service>
+
+        <service id="AdministrationTaskEntity\Core\Content\Question\SalesChannel\QuestionRoute">
+            <argument id="patrick_question.repository" type="service" />
+        </service>
+
+        <service id="AdministrationTaskEntity\Storefront\Controller\QuestionController" >
+            <argument type="service" id="AdministrationTaskEntity\Core\Content\Question\SalesChannel\QuestionRoute"/>
+        </service>
+    </services>
+</container>
